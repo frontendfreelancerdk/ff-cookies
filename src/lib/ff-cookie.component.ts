@@ -7,9 +7,11 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class FFCookieComponent implements OnInit {
   @Input() link: string = '';
+  @Input() linkText: string = 'cookie policy';
+  @Input() agreeText: string = 'Agree';
   @Input() description: string = 'We use cookies to ensure you the best experience. By clicking around the site you accept our ';
   @Input() path: string = '/';
-  @Input() expireDays: number = 365;
+  @Input() expireDays: number | string = 365;
 
   @Output() onAccept = new EventEmitter();
 
@@ -36,8 +38,11 @@ export class FFCookieComponent implements OnInit {
     return '';
   }
 
-  private setCookie(name: string, value: string, expireDays: number, path: string = '/') {
+  private setCookie(name: string, value: string, expireDays: number | string, path: string = '/') {
     const date = new Date();
+    if(typeof expireDays === 'string'){
+      expireDays = parseInt(expireDays, 10);
+    }
     date.setTime(date.getTime() + expireDays * 24 * 60 * 60 * 1000);
     const expires = `expires=${date.toUTCString()}`;
     const cpath = `; path=${path}`;
