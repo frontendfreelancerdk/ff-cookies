@@ -1,10 +1,13 @@
-import { NgModule } from '@angular/core';
-import { FfCookieComponent } from './ff-cookie.component';
+import {NgModule} from '@angular/core';
+import {FFCookieComponent} from './ff-cookie.component';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   imports: [
+    CommonModule
   ],
-  declarations: [FfCookieComponent],
-  exports: [FfCookieComponent]
+  declarations: [FFCookieComponent],
+  exports: [FFCookieComponent]
 })
-export class FfCookieModule { }
+export class FFCookieModule {
+}

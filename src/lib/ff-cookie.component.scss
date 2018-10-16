@@ -1,0 +1,46 @@
+.ff-cookie {
+  &-wrapper {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: lightseagreen;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2rem;
+  }
+
+  &-description {
+    margin-left: auto;
+  }
+
+  &-more,&-agree, &-description{
+    font-size: inherit;
+    color: inherit;
+  }
+  &-more,&-agree{
+    cursor: pointer;
+    text-align: center;
+    opacity: 0.6;
+    transition: all 0.5s ease-out;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &-more {
+    text-decoration: underline;
+
+  }
+
+  &-agree {
+    margin-right: auto;
+    background-color: transparent;
+    border: 2px solid #fff;
+    margin-left: 50px;
+    white-space: nowrap;
+    padding: 0.4rem 1rem;
+  }
+}
