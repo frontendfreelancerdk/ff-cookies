@@ -1,6 +1,6 @@
 # ff-cookie
 
-![Image alt](http://prntscr.com/l6uilv)
+![Image alt](https://github.com/frontendfreelancerdk/ff-cookie/blob/master/screenshot.png)
 
 ## Installing 
 
