@@ -1,6 +1,7 @@
 .ff-cookie {
   &-wrapper {
     position: fixed;
+    z-index: 9999999;
     bottom: 0;
     right: 0;
     left: 0;
