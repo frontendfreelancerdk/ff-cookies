@@ -54,7 +54,6 @@ export class FFCookieComponent implements OnInit {
 
   ngOnInit() {
     this.flag = this.getCookie('ff-cookies') === 'accepted';
-    console.log(this.getCookie('ff-cookies'));
   }
 
 }
