@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'ff-cookie',
@@ -49,11 +50,14 @@ export class FFCookieComponent implements OnInit {
     document.cookie = `${name}=${value}; ${expires}${cpath}`;
   }
 
-  constructor() {
+  constructor(public router: Router) {
   }
 
   ngOnInit() {
     this.flag = this.getCookie('ff-cookies') === 'accepted';
   }
 
+  onClick(){
+    this.router.navigate([this.link]);
+  }
 }

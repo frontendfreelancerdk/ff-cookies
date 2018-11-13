@@ -5,7 +5,7 @@
 >
   <div class="ff-cookie-description" id="ff-cookie-description">
     {{description}}
-    <a [href]="link" class="ff-cookie-more" aria-label="learn more about cookies" target="_blank" role="button">{{linkText}}</a>
+    <a class="ff-cookie-more" aria-label="learn more about cookies" role="button" (click)="onClick()">{{linkText}}</a>
   </div>
   <button (click)="coocieAccept()" class="ff-cookie-agree" aria-label="agree cookie message" role="button">{{agreeText}}</button>
 </div>
