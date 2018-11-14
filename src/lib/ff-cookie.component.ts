@@ -41,7 +41,7 @@ export class FFCookieComponent implements OnInit {
 
   private setCookie(name: string, value: string, expireDays: number | string, path: string = '/') {
     const date = new Date();
-    if(typeof expireDays === 'string'){
+    if (typeof expireDays === 'string') {
       expireDays = parseInt(expireDays, 10);
     }
     date.setTime(date.getTime() + expireDays * 24 * 60 * 60 * 1000);
@@ -57,7 +57,8 @@ export class FFCookieComponent implements OnInit {
     this.flag = this.getCookie('ff-cookies') === 'accepted';
   }
 
-  onClick(){
+  onClick(e) {
+    e.preventDefault();
     this.router.navigate([this.link]);
   }
 }
