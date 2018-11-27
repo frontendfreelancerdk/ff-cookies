@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FfCookieComponent } from './ff-cookie.component';
+import { FfCookieComponent } from './ff-cookies.component';
 
 describe('FfCookieComponent', () => {
   let component: FfCookieComponent;

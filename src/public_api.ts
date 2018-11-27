@@ -2,5 +2,5 @@
  * Public API Surface of cookie
  */
 
-export * from './lib/ff-cookie.component';
-export * from './lib/ff-cookie.module';
+export * from './lib/ff-cookies.component';
+export * from './lib/ff-cookies.module';

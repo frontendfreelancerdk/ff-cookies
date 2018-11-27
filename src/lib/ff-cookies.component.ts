@@ -3,10 +3,10 @@ import {Router} from '@angular/router';
 
 @Component({
   selector: 'ff-cookie',
-  templateUrl: './ff-cookie.component.html',
-  styleUrls: ['./ff-cookie.component.scss']
+  templateUrl: './ff-cookies.component.html',
+  styleUrls: ['./ff-cookies.component.scss']
 })
-export class FFCookieComponent implements OnInit {
+export class FfCookiesComponent implements OnInit {
   @Input() link: string = '';
   @Input() linkText: string = 'cookie policy';
   @Input() agreeText: string = 'Agree';
