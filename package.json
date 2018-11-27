@@ -4,10 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build ff-cookies && npm run copy-readme",
-    "copy-readme": "copy .\\README.md .\\dist\\ff-cookies",
+    "copy-readme": "copy .\\README.md .\\projects\\ff-cookies",
+    "cp-rd": "cp README.MD projects/ff-cookies",
     "test_lib": "ng test ff-cookies --watch=false --browsers=ChromeHeadless",
     "build_lib": "ng build ff-cookies",
+    "build": "npm run copy-readme && npm run build_lib",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
