@@ -1,61 +1,27 @@
-# ff-cookies
+# FfCookiesApp
 
-![Image alt](https://github.com/frontendfreelancerdk/ff-cookies/blob/master/screenshot.png)
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
 
-## Installing 
+## Development server
 
-npm install ff-cookies --save
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Using
+## Code scaffolding
 
-#### Basic
-```html
-<ff-cookies></ff-cookies>
-```
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-#### Also you can set up options:
-```html
-<ff-cookies
- link="/cookies-politic"
- linkText="cookies policy"
- agreeText="Agree"
- description="We use cookies to ensure you the best experience. By clicking around the site you accept our "
- 
- expireDays="365"
- path="/"
- 
- (onAccept)="someHandler($event)"
- ></ff-cookies>
-```
+## Build
 
-### Types and default values 
-```typescript
-  description: string = 'We use cookies to ensure you the best experience. By clicking around the site you accept our ';
-  linkText: string = 'cookies policy';
-  link: string = '';
-  agreeText: string = 'Agree';
-  path: string = '/';
-  expireDays: number | string  = 365;
-```
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Styling 
+## Running unit tests
 
-You can change default styles. Just cover
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-```css
-.ff-cookies-wrapper{
-// styles for wrapper
-}
-.ff-cookies-description{
-// styles for description
-}
+## Running end-to-end tests
 
-.ff-cookies-more{
-// styles for link 
-}
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-.ff-cookies-agree{
-// styles for accept button
-}
+## Further help
 
-```
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
