@@ -1,23 +1,23 @@
-# ff-cookie
+# ff-cookies
 
-![Image alt](https://github.com/frontendfreelancerdk/ff-cookie/blob/master/screenshot.png)
+![Image alt](https://github.com/frontendfreelancerdk/ff-cookies/blob/master/screenshot.png)
 
 ## Installing 
 
-npm install ff-cookie --save
+npm install ff-cookies --save
 
 ## Using
 
 #### Basic
 ```html
-<ff-cookie></ff-cookie>
+<ff-cookies></ff-cookies>
 ```
 
 #### Also you can set up options:
 ```html
-<ff-cookie
- link="/cookie-politic"
- linkText="cookie policy"
+<ff-cookies
+ link="/cookies-politic"
+ linkText="cookies policy"
  agreeText="Agree"
  description="We use cookies to ensure you the best experience. By clicking around the site you accept our "
  
@@ -25,15 +25,15 @@ npm install ff-cookie --save
  path="/"
  
  (onAccept)="someHandler($event)"
- ></ff-cookie>
+ ></ff-cookies>
 ```
 
 ### Types and default values 
 ```typescript
-  link: string = '';
-  linkText: string = 'cookie policy';
-  agreeText: string = 'Agree';
   description: string = 'We use cookies to ensure you the best experience. By clicking around the site you accept our ';
+  linkText: string = 'cookies policy';
+  link: string = '';
+  agreeText: string = 'Agree';
   path: string = '/';
   expireDays: number | string  = 365;
 ```
@@ -43,18 +43,18 @@ npm install ff-cookie --save
 You can change default styles. Just cover
 
 ```css
-.ff-cookie-wrapper{
+.ff-cookies-wrapper{
 // styles for wrapper
 }
-.ff-cookie-description{
+.ff-cookies-description{
 // styles for description
 }
 
-.ff-cookie-more{
+.ff-cookies-more{
 // styles for link 
 }
 
-.ff-cookie-agree{
+.ff-cookies-agree{
 // styles for accept button
 }
 

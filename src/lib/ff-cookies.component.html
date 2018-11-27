@@ -1,11 +1,11 @@
-<div *ngIf="!flag" class="ff-cookie-wrapper"
+<div *ngIf="!flag" class="ff-cookies-wrapper"
      role="dialog"
      aria-label="cookieconsent"
-     aria-describedby="ff-cookie-description"
+     aria-describedby="ff-cookies-description"
 >
-  <div class="ff-cookie-description" id="ff-cookie-description">
+  <div class="ff-cookies-description" id="ff-cookies-description">
     {{description}}
-    <a class="ff-cookie-more" aria-label="learn more about cookies" role="button" (click)="onClick($event)" [href]="link">{{linkText}}</a>
+    <a class="ff-cookies-more" aria-label="learn more about cookies" role="button" (click)="onClick($event)" [href]="link">{{linkText}}</a>
   </div>
-  <button (click)="coocieAccept()" class="ff-cookie-agree" aria-label="agree cookie message" role="button">{{agreeText}}</button>
+  <button (click)="cookiesAccept()" class="ff-cookies-agree" aria-label="agree cookies message" role="button">{{agreeText}}</button>
 </div>

@@ -2,13 +2,13 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'ff-cookie',
+  selector: 'ff-cookies',
   templateUrl: './ff-cookies.component.html',
   styleUrls: ['./ff-cookies.component.scss']
 })
 export class FfCookiesComponent implements OnInit {
   @Input() link: string = '';
-  @Input() linkText: string = 'cookie policy';
+  @Input() linkText: string = 'cookies policy';
   @Input() agreeText: string = 'Agree';
   @Input() description: string = 'We use cookies to ensure you the best experience. By clicking around the site you accept our ';
   @Input() path: string = '/';
@@ -19,19 +19,19 @@ export class FfCookiesComponent implements OnInit {
   flag: boolean;
 
 
-  coocieAccept() {
-    this.setCookie('ff-cookies', 'accepted', this.expireDays);
+  cookiesAccept() {
+    this.setCookies('ff-cookies', 'accepted', this.expireDays);
     this.onAccept.emit(true);
     this.flag = true;
   }
 
-  private getCookie(name: string) {
-    const cookieArray = document.cookie.split(';');
+  private getCookies(name: string) {
+    const cookiesArray = document.cookie.split(';');
     const cookieName = `${name}=`;
     let cookie: string;
 
-    for (let i: number = 0; i < cookieArray.length; i++) {
-      cookie = cookieArray[i].replace(/^\s+/g, '');
+    for (let i: number = 0; i < cookiesArray.length; i++) {
+      cookie = cookiesArray[i].replace(/^\s+/g, '');
       if (cookie.indexOf(cookieName) === 0) {
         return cookie.substring(cookieName.length, cookie.length);
       }
@@ -39,7 +39,7 @@ export class FfCookiesComponent implements OnInit {
     return '';
   }
 
-  private setCookie(name: string, value: string, expireDays: number | string, path: string = '/') {
+  private setCookies(name: string, value: string, expireDays: number | string, path: string = '/') {
     const date = new Date();
     if (typeof expireDays === 'string') {
       expireDays = parseInt(expireDays, 10);
@@ -54,7 +54,7 @@ export class FfCookiesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.flag = this.getCookie('ff-cookies') === 'accepted';
+    this.flag = this.getCookies('ff-cookies') === 'accepted';
   }
 
   onClick(e) {
