@@ -6,8 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "copy-readme": "copy .\\README.md .\\dist\\ng-example-library",
+    "cp-rd": "cp .\\README.md .\\dist\\ff-cookies",
     "test_lib": "ng test ff-cookies --watch=false --browsers=ChromeHeadless",
     "build_lib": "ng build ff-cookies && npm run copy-readme",
+    "build_lib_ub": "ng build ff-cookies && npm run cp-rd",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
