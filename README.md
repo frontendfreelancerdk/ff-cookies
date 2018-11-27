@@ -1,27 +1,61 @@
-# FfCookiesApp
+# ff-cookies
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
+![Image alt](https://github.com/frontendfreelancerdk/ff-cookies/blob/master/screenshot.png)
 
-## Development server
+## Installing 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+npm install ff-cookies --save
 
-## Code scaffolding
+## Using
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### Basic
+```html
+<ff-cookies></ff-cookies>
+```
 
-## Build
+#### Also you can set up options:
+```html
+<ff-cookies
+ link="/cookies-politic"
+ linkText="cookies policy"
+ agreeText="Agree"
+ description="We use cookies to ensure you the best experience. By clicking around the site you accept our "
+ 
+ expireDays="365"
+ path="/"
+ 
+ (onAccept)="someHandler($event)"
+ ></ff-cookies>
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Types and default values 
+```typescript
+  description: string = 'We use cookies to ensure you the best experience. By clicking around the site you accept our ';
+  linkText: string = 'cookies policy';
+  link: string = '';
+  agreeText: string = 'Agree';
+  path: string = '/';
+  expireDays: number | string  = 365;
+```
 
-## Running unit tests
+## Styling 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+You can change default styles. Just cover
 
-## Running end-to-end tests
+```css
+.ff-cookies-wrapper{
+// styles for wrapper
+}
+.ff-cookies-description{
+// styles for description
+}
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+.ff-cookies-more{
+// styles for link 
+}
 
-## Further help
+.ff-cookies-agree{
+// styles for accept button
+}
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```

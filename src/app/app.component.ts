@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ff-cookies-app';
+  title = 'ff-cookies';
+  description = 'We use cookies to ensure you the best experience. By clicking around the site you accept our ';
+  linkText = 'cookies policy';
+  link = 'cookies';
+  agreeText = 'Ok';
+  expireDays = 30;
+  path = '/';
 }

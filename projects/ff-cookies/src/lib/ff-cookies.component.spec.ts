@@ -1,20 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
-import { FfCookieComponent } from './ff-cookies.component';
+import { FfCookiesComponent } from './ff-cookies.component';
 
-describe('FfCookieComponent', () => {
-  let component: FfCookieComponent;
-  let fixture: ComponentFixture<FfCookieComponent>;
+describe('FfCookiesComponent', () => {
+  let component: FfCookiesComponent;
+  let fixture: ComponentFixture<FfCookiesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FfCookieComponent ]
+      imports: [RouterTestingModule],
+      declarations: [ FfCookiesComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FfCookieComponent);
+    fixture = TestBed.createComponent(FfCookiesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
