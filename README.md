@@ -1,6 +1,6 @@
 # ff-cookies
 
-![Image alt](https://github.com/frontendfreelancerdk/ff-cookies/blob/master/projects/ff-cookies/screenshot.png)
+![Screenshot](https://github.com/frontendfreelancerdk/ff-cookies/blob/master/projects/ff-cookies/screenshot.png)
 
 ## Installing 
 

@@ -6,7 +6,6 @@ node_js:
   - node
 script:
   - npm run test_lib
-  - npm run cp-rd
   - npm run build_lib
 before_deploy:
   - cd dist/ff-cookies

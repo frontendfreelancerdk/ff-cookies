@@ -152,7 +152,8 @@
           "options": {
             "main": "projects/ff-cookies/src/test.ts",
             "tsConfig": "projects/ff-cookies/tsconfig.spec.json",
-            "karmaConfig": "projects/ff-cookies/karma.conf.js"
+            "karmaConfig": "projects/ff-cookies/karma.conf.js",
+            "codeCoverage": true
           }
         },
         "lint": {

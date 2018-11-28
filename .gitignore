@@ -37,3 +37,10 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Readme
+/projects/ff-cookies/README.md
+
+# Coverage
+/projects/ff-cookies/coverage
+
