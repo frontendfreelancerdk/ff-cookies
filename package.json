@@ -7,7 +7,7 @@
     "copy-readme": "copy .\\README.md .\\projects\\ff-cookies",
     "test_lib": "ng test ff-cookies --watch=false --browsers=ChromeHeadless",
     "build_lib": "ng build ff-cookies",
-    "prebuild_lib": "copy .\\README.md .\\projects\\ff-cookies",
+    "prebuild_lib": "cp README.md  projects\\ff-cookies",
     "build": "npm run copy-readme && npm run build_lib",
     "test": "ng test",
     "lint": "ng lint",
