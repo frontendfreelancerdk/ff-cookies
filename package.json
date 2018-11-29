@@ -1,13 +1,13 @@
 {
   "name": "ff-cookies-app",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "copy-readme": "copy .\\README.md .\\projects\\ff-cookies",
     "test_lib": "ng test ff-cookies --watch=false --browsers=ChromeHeadless",
     "build_lib": "ng build ff-cookies",
-    "prebuild_lib": "cp README.md  projects\\ff-cookies",
+    "prebuild_lib": "node copy_readme",
     "build": "npm run copy-readme && npm run build_lib",
     "test": "ng test",
     "lint": "ng lint",

@@ -7,11 +7,11 @@ import {Router} from '@angular/router';
   styleUrls: ['./ff-cookies.component.scss']
 })
 export class FfCookiesComponent implements OnInit {
-  @Input() link: string = '';
-  @Input() linkText: string = 'cookies policy';
-  @Input() agreeText: string = 'Agree';
-  @Input() description: string = 'We use cookies to ensure you the best experience. By clicking around the site you accept our ';
-  @Input() path: string = '/';
+  @Input() link = '';
+  @Input() linkText = 'cookies policy';
+  @Input() agreeText = 'Agree';
+  @Input() description = 'We use cookies to ensure you the best experience. By clicking around the site you accept our ';
+  @Input() path = '/';
   @Input() expireDays: number | string = 365;
 
   @Output() onAccept = new EventEmitter();
@@ -30,7 +30,7 @@ export class FfCookiesComponent implements OnInit {
     const cookieName = `${name}=`;
     let cookie: string;
 
-    for (let i: number = 0; i < cookiesArray.length; i++) {
+    for (let i = 0; i < cookiesArray.length; i++) {
       cookie = cookiesArray[i].replace(/^\s+/g, '');
       if (cookie.indexOf(cookieName) === 0) {
         return cookie.substring(cookieName.length, cookie.length);

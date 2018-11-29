@@ -1,7 +1,7 @@
 .ff-cookies {
   &-wrapper {
     position: fixed;
-    z-index: 9999999;
+    z-index: 99999;
     bottom: 0;
     right: 0;
     left: 0;
@@ -25,7 +25,7 @@
   &-more,&-agree{
     cursor: pointer;
     text-align: center;
-    opacity: 0.6;
+    opacity: 0.7;
     transition: all 0.5s ease-out;
     &:hover {
       opacity: 1;
@@ -33,7 +33,6 @@
   }
   &-more {
     text-decoration: underline;
-
   }
 
   &-agree {
