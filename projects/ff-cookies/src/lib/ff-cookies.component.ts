@@ -46,8 +46,8 @@ export class FfCookiesComponent implements OnInit {
     }
     date.setTime(date.getTime() + expireDays * 24 * 60 * 60 * 1000);
     const expires = `expires=${date.toUTCString()}`;
-    const cpath = `; path=${path}`;
-    document.cookie = `${name}=${value}; ${expires}${cpath}`;
+    const cookies_path = `; path=${path}`;
+    document.cookie = `${name}=${value}; ${expires}${cookies_path}`;
   }
 
   constructor(public router: Router) {
