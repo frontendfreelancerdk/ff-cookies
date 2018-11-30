@@ -1,6 +1,8 @@
+[![Build Status](https://travis-ci.org/frontendfreelancerdk/ff-cookies.svg?branch=master)](https://travis-ci.org/frontendfreelancerdk/ff-cookies)
+
 # ff-cookies
 
-![Screenshot](https://github.com/frontendfreelancerdk/ff-cookies/blob/master/projects/ff-cookies/screenshot.png)
+![Screenshot](https://github.com/frontendfreelancerdk/ff-cookies/blob/master/projects/ff-cookies/screenshot.png?raw=true)
 
 ## Installing 
 
