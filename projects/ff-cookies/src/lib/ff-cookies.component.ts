@@ -1,12 +1,13 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output, PLATFORM_ID} from '@angular/core';
 import {Router} from '@angular/router';
+import {isPlatformBrowser} from '@angular/common';
 
 @Component({
   selector: 'ff-cookies',
   templateUrl: './ff-cookies.component.html',
   styleUrls: ['./ff-cookies.component.scss']
 })
-export class FfCookiesComponent implements OnInit {
+export class FFCookiesComponent implements OnInit {
   @Input() link: string = '';
   @Input() linkText: string = 'cookies policy';
   @Input() agreeText: string = 'Agree';
@@ -26,28 +27,36 @@ export class FfCookiesComponent implements OnInit {
   }
 
   private getCookies(name: string) {
-    const cookiesArray = document.cookie.split(';');
-    const cookieName = `${name}=`;
-    let cookie: string;
+    console.log('isPlatformBrowser(PLATFORM_ID)', isPlatformBrowser(PLATFORM_ID));
 
-    for (let i: number = 0; i < cookiesArray.length; i++) {
-      cookie = cookiesArray[i].replace(/^\s+/g, '');
-      if (cookie.indexOf(cookieName) === 0) {
-        return cookie.substring(cookieName.length, cookie.length);
+    if (isPlatformBrowser(PLATFORM_ID)) {
+      const cookiesArray = document.cookie.split(';');
+      const cookieName = `${name}=`;
+      let cookie: string;
+
+      for (let i = 0; i < cookiesArray.length; i++) {
+        cookie = cookiesArray[i].replace(/^\s+/g, '');
+        if (cookie.indexOf(cookieName) === 0) {
+          return cookie.substring(cookieName.length, cookie.length);
+        }
       }
     }
     return '';
   }
 
   private setCookies(name: string, value: string, expireDays: number | string, path: string = '/') {
-    const date = new Date();
-    if (typeof expireDays === 'string') {
-      expireDays = parseInt(expireDays, 10);
+    console.log('isPlatformBrowser(PLATFORM_ID)', isPlatformBrowser(PLATFORM_ID));
+
+    if (isPlatformBrowser(PLATFORM_ID)) {
+      const date = new Date();
+      if (typeof expireDays === 'string') {
+        expireDays = parseInt(expireDays, 10);
+      }
+      date.setTime(date.getTime() + expireDays * 24 * 60 * 60 * 1000);
+      const expires = `expires=${date.toUTCString()}`;
+      const cpath = `; path=${path}`;
+      document.cookie = `${name}=${value}; ${expires}${cpath}`;
     }
-    date.setTime(date.getTime() + expireDays * 24 * 60 * 60 * 1000);
-    const expires = `expires=${date.toUTCString()}`;
-    const cpath = `; path=${path}`;
-    document.cookie = `${name}=${value}; ${expires}${cpath}`;
   }
 
   constructor(public router: Router) {
