@@ -1,13 +1,16 @@
 {
   "name": "ff-cookies",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
     "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
   },
-  "keywords" :["Angular","Library"],
+  "keywords": [
+    "Angular",
+    "Library"
+  ],
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/frontendfreelancerdk/ff-cookies"
+    "type": "git",
+    "url": "https://github.com/frontendfreelancerdk/ff-cookies"
   }
 }
