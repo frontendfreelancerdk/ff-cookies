@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {CookiesService} from '@ngx-utils/cookies';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,18 @@ export class AppComponent {
   linkText = 'cookies policy';
   link = 'cookies';
   agreeText = 'Ok';
-  expireDays = 30;
-  path = '/';
+
+  constructor(private cookies: CookiesService) {
+  }
+
+  checkCookies() {
+    console.log('checkCookies', this.cookies.get('key') === 'value');
+    return this.cookies.get('key') === 'value';
+  }
+
+  setCookies() {
+    console.log('setCookies');
+    this.cookies.put('key', 'value');
+  }
 }
+
