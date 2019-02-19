@@ -1,11 +1,12 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import {FfCookiesModule} from '../../projects/ff-cookies/src/lib/ff-cookies.module';
-import { CookiesPageComponent } from './cookies-page/cookies-page.component';
-import { AppRoutingModule } from './app-routing.module';
-import { HomePageComponent } from './home-page/home-page.component';
+import {AppComponent} from './app.component';
+import {FFCookiesModule} from 'ff-cookies';
+import {CookiesPageComponent} from './cookies-page/cookies-page.component';
+import {AppRoutingModule} from './app-routing.module';
+import {HomePageComponent} from './home-page/home-page.component';
+import {BrowserCookiesModule} from '@ngx-utils/cookies/browser';
 
 @NgModule({
   declarations: [
@@ -15,10 +16,12 @@ import { HomePageComponent } from './home-page/home-page.component';
   ],
   imports: [
     BrowserModule,
-    FfCookiesModule,
-    AppRoutingModule
+    FFCookiesModule,
+    AppRoutingModule,
+    BrowserCookiesModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

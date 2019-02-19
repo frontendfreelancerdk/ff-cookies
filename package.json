@@ -1,13 +1,12 @@
 {
   "name": "ff-cookies-app",
-  "version": "0.1.5",
+  "version": "0.3.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "copy-readme": "copy .\\README.md .\\projects\\ff-cookies",
     "test_lib": "ng test ff-cookies --watch=false --browsers=ChromeHeadless",
     "build_lib": "ng build ff-cookies",
-    "prebuild_lib": "node copy_readme",
     "build": "npm run copy-readme && npm run build_lib",
     "test": "ng test",
     "lint": "ng lint",
@@ -24,6 +23,7 @@
     "@angular/platform-browser": "~7.0.0",
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
+    "@ngx-utils/cookies": "^3.0.2",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.26"

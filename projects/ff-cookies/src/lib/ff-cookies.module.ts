@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {FfCookiesComponent} from './ff-cookies.component';
+import {FFCookiesComponent} from './ff-cookies.component';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 
@@ -8,8 +8,8 @@ import {RouterModule} from '@angular/router';
     CommonModule,
     RouterModule
   ],
-  declarations: [FfCookiesComponent],
-  exports: [FfCookiesComponent]
+  declarations: [FFCookiesComponent],
+  exports: [FFCookiesComponent]
 })
-export class FfCookiesModule {
+export class FFCookiesModule {
 }
