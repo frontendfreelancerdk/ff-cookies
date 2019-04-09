@@ -57,7 +57,7 @@ Simple usage
 
 ## Styling 
 
-You can change default styles. That can be used to target the overlay 
+You can change default styles. That can be used to target the override
 
 ```css
 .ff-cookies-wrapper{
