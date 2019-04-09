@@ -38,7 +38,7 @@ Simple usage
  description="We use cookies to ensure you the best experience. By clicking around the site you accept our "
 <!-- output triggered after user click on "accept" button -->
  (accept)="myHandler($event)"
- ></ff-cookies>
+></ff-cookies>
 ```
 
 ### Types and default values 
