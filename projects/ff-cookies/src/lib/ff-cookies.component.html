@@ -5,7 +5,7 @@
 >
   <div class="ff-cookies-description" id="ff-cookies-description">
     {{description}}
-    <a class="ff-cookies-more" aria-label="learn more about cookies" role="button" (click)="onClick($event)" [href]="link">{{linkText}}</a>
+    <a *ngIf="link" class="ff-cookies-more" aria-label="learn more about cookies" role="button" (click)="_navigate($event)" [href]="link">{{linkText}}</a>
   </div>
   <button (click)="cookiesAccept()" class="ff-cookies-agree" aria-label="agree cookies message" role="button">{{agreeText}}</button>
 </div>

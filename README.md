@@ -13,40 +13,46 @@ npm install ff-cookies --save
 
 #### Basic
 
-There must be present 2 methods for check and set cookies. You should make some logic for this. It let us to use  SSR and @ngx-utils/cookies
+Simple usage
 ```html
-<ff-cookies
- [checkCookies]="myMethodForCheckCookies.bind(this)"
- [setCookies]="myMethodForSetCookies.bind(this)"
- ></ff-cookies>
+<ff-cookies></ff-cookies>
 ```
 
 #### Also you can set up options:
 ```html
 <ff-cookies
-  
- [checkCookies]="checkCookies.bind(this)"
- [setCookies]="setCookies.bind(this)"
- 
- (accept)="someHandler($event)"
- 
+<!-- You can change the default method that determines whether to display the component or not. -->
+ [checkCookies]="myCheckCookies.bind(this)" 
+<!-- Cookies options -->
+ path="/"
+ expireDays="30"
+ cookieName="myCookieName"
+ cookieValue="cookies accepted"
+<!-- set href for link -->
  link="/cookies-politic"
+<!-- set text for link -->
  linkText="cookies policy"
+<!-- set text for "agree" button -->
  agreeText="Agree"
+<!-- set main text -->
  description="We use cookies to ensure you the best experience. By clicking around the site you accept our "
-
+<!-- output triggered after user click on "accept" button -->
+ (accept)="myHandler($event)"
  ></ff-cookies>
 ```
 
 ### Types and default values 
 ```typescript
   checkCookies: () => boolean;
-  setCookies: () => void; 
   accept: (event: Event) => void;
   description: string = 'We use cookies to ensure you the best experience. By clicking around the site you accept our ';
   linkText: string = 'cookies policy';
   link: string = '';
   agreeText: string = 'Agree';
+  path: string = '/';
+  expireDays: string | number = 365;
+  cookieName: string = 'myCookieName';
+  cookieValue: string = 'cookies accepted';
 ```
 
 ## Styling 
