@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Inject, Input, OnInit, Output, PLATFORM_ID, ViewEncapsulation} from '@angular/core';
 import {Router} from '@angular/router';
-import {DOCUMENT, isPlatformBrowser} from '@angular/common';
+import {isPlatformBrowser} from '@angular/common';
 
 @Component({
   selector: 'ff-cookies',
@@ -23,7 +23,7 @@ export class FFCookiesComponent implements OnInit {
 
   flag: boolean;
 
-  constructor(public router: Router, @Inject(PLATFORM_ID) private platformId: any, @Inject(DOCUMENT) private document: Document) {
+  constructor(public router: Router, @Inject(PLATFORM_ID) private platformId: any) {
   }
 
   cookiesAccept() {
