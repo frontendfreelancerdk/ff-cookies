@@ -6,7 +6,6 @@ import {FFCookiesModule} from 'ff-cookies';
 import {CookiesPageComponent} from './cookies-page/cookies-page.component';
 import {AppRoutingModule} from './app-routing.module';
 import {HomePageComponent} from './home-page/home-page.component';
-import {BrowserCookiesModule} from '@ngx-utils/cookies/browser';
 
 @NgModule({
   declarations: [
@@ -17,8 +16,7 @@ import {BrowserCookiesModule} from '@ngx-utils/cookies/browser';
   imports: [
     BrowserModule,
     FFCookiesModule,
-    AppRoutingModule,
-    BrowserCookiesModule.forRoot()
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
