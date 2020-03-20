@@ -1,0 +1,23 @@
+<div class="ff-cookies modal" *ngIf="!flag">
+  <div class="ff-cookies-overlay"></div>
+  <div class="ff-cookies-modal" role="dialog"
+       aria-label="cookieconsent"
+       aria-describedby="ff-cookies-description">
+    <div class="ff-cookies-description" id="ff-cookies-description">
+      {{description}}
+      <a *ngIf="link" class="ff-cookies-more" aria-label="learn more about cookies" role="button"
+         (click)="service.navigate($event)" [href]="link">{{linkText}}</a>
+      <form [formGroup]='cookiesForm'>
+        <label *ngFor="let cookiesControl of cookiesControls; let i=index">
+          <input type="checkbox" [formControl]="cookiesControl"/> {{cookiesSet[i]}}
+        </label>
+        <div>
+          <button (click)="acceptSelected()" class="ff-cookies-agree" aria-label="agree cookies message"
+                  role="button">{{acceptSelectedText}}</button>
+          <button (click)="acceptAll()" class="ff-cookies-agree" aria-label="agree cookies message"
+                  role="button">{{acceptAllText}}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

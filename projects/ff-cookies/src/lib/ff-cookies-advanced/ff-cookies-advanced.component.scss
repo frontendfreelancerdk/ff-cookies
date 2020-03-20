@@ -1,0 +1,134 @@
+.ff-cookies {
+  max-height: 90vh;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+
+
+  &.expanded {
+    //overflow-y: auto;
+  }
+
+  &-wrapper {
+    background-color: lightseagreen;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2rem;
+  }
+
+  &-description {
+    margin-left: auto;
+  }
+
+  &-more, &-agree, &-description {
+    font-size: inherit;
+    color: inherit;
+  }
+
+  &-more, &-agree {
+    cursor: pointer;
+    text-align: center;
+    opacity: 0.7;
+    transition: all 0.5s ease-out;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &-more {
+    text-decoration: underline;
+  }
+
+  &-agree {
+    margin-right: auto;
+    background-color: transparent;
+    border: 2px solid #fff;
+    margin-left: 50px;
+    white-space: nowrap;
+    padding: 0.4rem 1rem;
+  }
+
+  &-details {
+    max-height: 540px;
+    position: relative;
+    overflow-y: auto;
+
+    &-description {
+      padding: 15px 30px;
+      border-bottom: 1px solid #555555;
+    }
+  }
+
+  &-btn {
+    &-wrapper {
+      display: flex;
+      justify-content: center;
+      @media screen and (min-width: 767px) {
+        width: 25%;
+      }
+    }
+
+    &-ok {
+      min-width: 150px;
+      cursor: pointer;
+      text-transform: uppercase;
+      height: 40px;
+      font-weight: 700;
+      text-align: center;
+      border-radius: 0;
+      border: none;
+      align-self: center;
+    }
+
+  }
+}
+
+.tab-content-wrapper {
+  display: flex;
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+.left-column {
+  min-width: 25%;
+  padding: 25px 30px;
+  @media only screen and (min-width: 767px) {
+    padding: 25px 10px;
+    background-color: #fcfcfc;
+  }
+}
+
+.right-column {
+  min-width: 75%;
+  padding: 25px 30px;
+  @media only screen and (min-width: 767px) {
+    transform: translateY(-110px);
+  }
+  @media only screen and (min-width: 1150px) {
+    transform: translateY(-50px);
+  }
+}
+
+.ff-cookies-details::ng-deep > ff-tabs > .ff-nav-tabs {
+  width: 100%;
+  flex-flow: column;
+  @media only screen and (min-width: 767px) {
+    width: 25%;
+  }
+  @media only screen and (min-width: 1150px) {
+    flex-flow: row;
+  }
+}
+
+:host::ng-deep * {
+  box-sizing: border-box;
+}
+

@@ -1,0 +1,247 @@
+{
+  "groups": [
+    {
+      "id": 0,
+      "name": "Necessary",
+      "required": true,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dolorem eveniet fugiat magnam, nesciunt quos repudiandae suscipit unde veniam veritatis? Ad aut dicta eaque voluptatem voluptatibus? Alias nisi recusandae tempora.",
+      "titles": {
+        "name": "Name",
+        "provider": "Provider",
+        "purpose": "Purpose",
+        "expiry": "Expiry",
+        "dataProcessor": "Data Processor",
+        "dataProcessorPrivacyPolicy": "Data Processor Privacy Policy",
+        "type": "Type"
+      },
+      "cookies": [
+        {
+          "name": "some name",
+          "provider": "some provider",
+          "purpose": "some Purpose",
+          "expiry": "some expiry",
+          "dataProcessor": "dataProcessor",
+          "dataProcessorPrivacyPolicy": "Data Processor Privacy Policy",
+          "type": "some type"
+        },
+        {
+          "name": "some name",
+          "provider": "some provider",
+          "purpose": "some Purpose",
+          "expiry": "some expiry",
+          "dataProcessor": "dataProcessor",
+          "dataProcessorPrivacyPolicy": "Data Processor Privacy Policy",
+          "type": "some type"
+        },
+        {
+          "name": "some name",
+          "provider": "some provider",
+          "purpose": "some Purpose",
+          "expiry": "some expiry",
+          "dataProcessor": "dataProcessor",
+          "dataProcessorPrivacyPolicy": "Data Processor Privacy Policy",
+          "type": "some type"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Preferences",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dolorem eveniet fugiat magnam, nesciunt quos repudiandae suscipit unde veniam veritatis? Ad aut dicta eaque voluptatem voluptatibus? Alias nisi recusandae tempora.",
+      "titles": {
+        "name": "Name",
+        "provider": "Provider",
+        "purpose": "Purpose",
+        "expiry": "Expiry",
+        "dataProcessor": "Data Processor",
+        "dataProcessorPrivacyPolicy": "Data Processor Privacy Policy",
+        "type": "Type"
+      },
+      "cookies": [
+        {
+          "name": "some name",
+          "provider": "some provider",
+          "purpose": "some Purpose",
+          "expiry": "some expiry",
+          "dataProcessor": "dataProcessor",
+          "dataProcessorPrivacyPolicy": "Data Processor Privacy Policy",
+          "type": "some type"
+        },
+        {
+          "name": "some name",
+          "provider": "some provider",
+          "purpose": "some Purpose",
+          "expiry": "some expiry",
+          "dataProcessor": "dataProcessor",
+          "dataProcessorPrivacyPolicy": "Data Processor Privacy Policy",
+          "type": "some type"
+        },
+        {
+          "name": "some name",
+          "provider": "some provider",
+          "purpose": "some Purpose",
+          "expiry": "some expiry",
+          "dataProcessor": "dataProcessor",
+          "dataProcessorPrivacyPolicy": "Data Processor Privacy Policy",
+          "type": "some type"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Statistics",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dolorem eveniet fugiat magnam, nesciunt quos repudiandae suscipit unde veniam veritatis? Ad aut dicta eaque voluptatem voluptatibus? Alias nisi recusandae tempora.",
+      "titles": {
+        "name": "Name",
+        "provider": "Provider",
+        "purpose": "Purpose",
+        "expiry": "Expiry",
+        "dataProcessor": "Data Processor",
+        "dataProcessorPrivacyPolicy": "Data Processor Privacy Policy",
+        "type": "Type"
+      },
+      "cookies": [
+        {
+          "name": "some name",
+          "provider": "some provider",
+          "purpose": "some Purpose",
+          "expiry": "some expiry",
+          "dataProcessor": "dataProcessor",
+          "dataProcessorPrivacyPolicy": "Data Processor Privacy Policy",
+          "type": "some type"
+        },
+        {
+          "name": "some name",
+          "provider": "some provider",
+          "purpose": "some Purpose",
+          "expiry": "some expiry",
+          "dataProcessor": "dataProcessor",
+          "dataProcessorPrivacyPolicy": "Data Processor Privacy Policy",
+          "type": "some type"
+        },
+        {
+          "name": "some name",
+          "provider": "some provider",
+          "purpose": "some Purpose",
+          "expiry": "some expiry",
+          "dataProcessor": "dataProcessor",
+          "dataProcessorPrivacyPolicy": "Data Processor Privacy Policy",
+          "type": "some type"
+        },
+        {
+          "name": "some name",
+          "provider": "some provider",
+          "purpose": "some Purpose",
+          "expiry": "some expiry",
+          "dataProcessor": "dataProcessor",
+          "dataProcessorPrivacyPolicy": "Data Processor Privacy Policy",
+          "type": "some type"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Marketing",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dolorem eveniet fugiat magnam, nesciunt quos repudiandae suscipit unde veniam veritatis? Ad aut dicta eaque voluptatem voluptatibus? Alias nisi recusandae tempora.",
+      "titles": {
+        "name": "Name",
+        "provider": "Provider",
+        "purpose": "Purpose",
+        "expiry": "Expiry",
+        "dataProcessor": "Data Processor",
+        "dataProcessorPrivacyPolicy": "Data Processor Privacy Policy",
+        "type": "Type"
+      },
+      "cookies": [
+        {
+          "name": "some name",
+          "provider": "some provider",
+          "purpose": "some Purpose",
+          "expiry": "some expiry",
+          "dataProcessor": "dataProcessor",
+          "dataProcessorPrivacyPolicy": "Data Processor Privacy Policy",
+          "type": "some type"
+        },
+        {
+          "name": "some name",
+          "provider": "some provider",
+          "purpose": "some Purpose",
+          "expiry": "some expiry",
+          "dataProcessor": "dataProcessor",
+          "dataProcessorPrivacyPolicy": "Data Processor Privacy Policy",
+          "type": "some type"
+        },
+        {
+          "name": "some name",
+          "provider": "some provider",
+          "purpose": "some Purpose",
+          "expiry": "some expiry",
+          "dataProcessor": "dataProcessor",
+          "dataProcessorPrivacyPolicy": "Data Processor Privacy Policy",
+          "type": "some type"
+        },
+        {
+          "name": "some name",
+          "provider": "some provider",
+          "purpose": "some Purpose",
+          "expiry": "some expiry",
+          "dataProcessor": "dataProcessor",
+          "dataProcessorPrivacyPolicy": "Data Processor Privacy Policy",
+          "type": "some type"
+        },
+        {
+          "name": "some name",
+          "provider": "some provider",
+          "purpose": "some Purpose",
+          "expiry": "some expiry",
+          "dataProcessor": "dataProcessor",
+          "dataProcessorPrivacyPolicy": "Data Processor Privacy Policy",
+          "type": "some type"
+        },
+        {
+          "name": "some name",
+          "provider": "some provider",
+          "purpose": "some Purpose",
+          "expiry": "some expiry",
+          "dataProcessor": "dataProcessor",
+          "dataProcessorPrivacyPolicy": "Data Processor Privacy Policy",
+          "type": "some type"
+        },
+        {
+          "name": "some name",
+          "provider": "some provider",
+          "purpose": "some Purpose",
+          "expiry": "some expiry",
+          "dataProcessor": "dataProcessor",
+          "dataProcessorPrivacyPolicy": "Data Processor Privacy Policy",
+          "type": "some type"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Unclassified",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dolorem eveniet fugiat magnam, nesciunt quos repudiandae suscipit unde veniam veritatis? Ad aut dicta eaque voluptatem voluptatibus? Alias nisi recusandae tempora.",
+      "titles": {
+        "name": "Name",
+        "provider": "Provider",
+        "purpose": "Purpose",
+        "expiry": "Expiry",
+        "dataProcessor": "Data Processor",
+        "dataProcessorPrivacyPolicy": "Data Processor Privacy Policy",
+        "type": "Type"
+      },
+      "cookies": [
+        {
+          "name": "some name",
+          "provider": "some provider",
+          "purpose": "some Purpose",
+          "expiry": "some expiry",
+          "dataProcessor": "dataProcessor",
+          "dataProcessorPrivacyPolicy": "Data Processor Privacy Policy",
+          "type": "some type"
+        }
+      ]
+    }
+  ]
+}

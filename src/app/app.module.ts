@@ -1,5 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
+
 
 import {AppComponent} from './app.component';
 import {FFCookiesModule} from 'ff-cookies';
@@ -15,6 +17,7 @@ import {HomePageComponent} from './home-page/home-page.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FFCookiesModule,
     AppRoutingModule
   ],

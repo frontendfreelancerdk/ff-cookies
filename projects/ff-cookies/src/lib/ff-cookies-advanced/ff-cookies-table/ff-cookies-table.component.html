@@ -1,0 +1,31 @@
+<!--Name //	Provider //	Purpose //	Expiry // Data Processor // Data Processor Privacy Policy-->
+<div class="ff-cookies-table-row" *ngFor="let cookie of cookiesGroup?.cookies">
+  <div class="ff-cookies-table-col" [attr.title]="cookie?.name">
+    <span class="ff-cookies-table-title">{{cookiesGroup?.titles.name + ': '}}</span>
+    <span class="ff-cookies-table-value">{{cookie?.name}}</span>
+  </div>
+  <div class="ff-cookies-table-col" [attr.title]="cookie?.provider">
+    <span class="ff-cookies-table-title">{{cookiesGroup?.titles.provider + ': '}}</span>
+    <span class="ff-cookies-table-value">{{cookie?.provider}}</span>
+  </div>
+  <div class="ff-cookies-table-col" [attr.title]="cookie?.purpose">
+    <span class="ff-cookies-table-title">{{cookiesGroup?.titles.purpose + ': '}}</span>
+    <span class="ff-cookies-table-value">{{cookie?.purpose}}</span>
+  </div>
+  <div class="ff-cookies-table-col" [attr.title]="cookie?.expiry">
+    <span class="ff-cookies-table-title">{{cookiesGroup?.titles.expiry + ': '}}</span>
+    <span class="ff-cookies-table-value">{{cookie?.expiry}}</span>
+  </div>
+  <div class="ff-cookies-table-col" [attr.title]="cookie?.dataProcessor">
+    <span class="ff-cookies-table-title">{{cookiesGroup?.titles.dataProcessor + ': '}}</span>
+    <span class="ff-cookies-table-value">{{cookie?.dataProcessor}}</span>
+  </div>
+  <div class="ff-cookies-table-col" [attr.title]="cookie?.dataProcessorPrivacyPolicy">
+    <span class="ff-cookies-table-title">{{cookiesGroup?.titles.dataProcessorPrivacyPolicy + ': '}}</span>
+    <span class="ff-cookies-table-value">{{cookie?.dataProcessorPrivacyPolicy}}</span>
+  </div>
+  <div class="ff-cookies-table-col" [attr.title]="cookie?.type">
+    <span class="ff-cookies-table-title">{{cookiesGroup?.titles.type + ': '}}</span>
+    <span class="ff-cookies-table-value">{{cookie?.type}}</span>
+  </div>
+</div>

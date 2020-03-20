@@ -1,0 +1,76 @@
+.ff-cookies {
+  position: fixed;
+  z-index: 99999;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  &.modal {
+    top: 0;
+  }
+
+  &-wrapper, &-modal {
+    background-color: lightseagreen;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2rem;
+  }
+
+  &-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90vw;
+    max-height: 90vh;
+    z-index: 2;
+    box-shadow: #121212 2px 2px 14px 2px;
+    border-radius: 12px;
+  }
+
+  &-overlay {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    background-color: rgba(18, 18, 18, .75);
+  }
+
+  &-description {
+    margin-left: auto;
+  }
+
+  &-more, &-agree, &-description {
+    font-size: inherit;
+    color: inherit;
+  }
+
+  &-more, &-agree {
+    cursor: pointer;
+    text-align: center;
+    opacity: 0.7;
+    transition: all 0.5s ease-out;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &-more {
+    text-decoration: underline;
+  }
+
+  &-agree {
+    margin-right: auto;
+    background-color: transparent;
+    border: 2px solid #fff;
+    margin-left: 50px;
+    white-space: nowrap;
+    padding: 0.4rem 1rem;
+  }
+}

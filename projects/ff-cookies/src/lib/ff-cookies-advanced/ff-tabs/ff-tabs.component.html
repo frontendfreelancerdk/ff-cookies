@@ -1,0 +1,29 @@
+<div class="ff-nav-tabs" [ngClass]="{'ff-tab-vertical': vertical}">
+  <ng-container *ngFor="let tab of tabs">
+    <div (click)="selectTab(tab)" [class.active]="tab.active" role="tab" class="ff-nav-tab">
+
+      <div>{{tab.title}}</div>
+      <ng-container *ngTemplateOutlet="tab.required ? tabRequiredSwitch : tabSwitch"></ng-container>
+      <ng-template #tabSwitch>
+        <div class="ff-switch-checkbox">
+          <input type="checkbox" [checked]="tab.checked"
+                 (change)="tab.checked = !tab.checked; tab.selected.emit(tab.checked)">
+          <div class="ff-switch" [ngClass]="{'active' : tab.checked}" (click)="inputClickHandler($event, tab)"></div>
+        </div>
+      </ng-template>
+      <ng-template #tabRequiredSwitch>
+        <div class="ff-switch-checkbox">
+          <input type="checkbox" [checked]="true" disabled>
+          <div class="ff-switch active disabled"></div>
+        </div>
+      </ng-template>
+    </div>
+    <ng-container *ngTemplateOutlet="vertical && tab.active && content"></ng-container>
+  </ng-container>
+</div>
+<ng-container *ngTemplateOutlet="!vertical && content"></ng-container>
+<ng-template #content>
+  <div class="ff-tab-content" [ngClass]="{'ff-tab-vertical': vertical}">
+    <ng-content></ng-content>
+  </div>
+</ng-template>

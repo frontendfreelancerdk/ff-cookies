@@ -1,0 +1,43 @@
+<div class="ff-cookies" *ngIf="!flag" aria-modal="true" role="dialog" aria-label="cookieconsent"
+     aria-describedby="ff-cookies-description" aria-labelledby="ff-cookies-description" #container>
+  <div class="ff-cookies-wrapper"
+  >
+    <div class="ff-cookies-description" id="ff-cookies-description">
+      {{description}}
+      <a *ngIf="link" class="ff-cookies-more" aria-label="learn more about cookies" role="button"
+         (click)="service.navigate($event)" [href]="link">{{linkText}}</a>.
+      <a role="button" class="ff-cookies-more" (click)="toggle()">{{toggleText}}</a>
+    </div>
+    <button (click)="cookiesAccept()" class="ff-cookies-agree" [attr.aria-label]="agreeText"
+            role="button">{{agreeText}}</button>
+  </div>
+  <div [@openClose]="animationState" class="ff-cookies-details" (@openClose.start)="animationStart($event)"
+       (@openClose.done)="animationDone($event)">
+    <ff-tabs>
+      <ff-tab *ngIf="mainTabsTitle[0]" [tabTitle]="mainTabsTitle[0]">
+        <ff-tabs [vertical]="true">
+          <ff-tab *ngFor="let cookieGroup of cookiesSet?.groups; let i = index;" [tabTitle]="cookieGroup?.name"
+                  (selected)="selectedHandler($event, cookieGroup?.id)" [required]="cookieGroup.required" [active]="i===0">
+            <p class="ff-cookies-details-description">{{cookieGroup.description}}</p>
+            <ff-cookies-table [cookiesGroup]="cookieGroup"></ff-cookies-table>
+          </ff-tab>
+        </ff-tabs>
+        <p class="ff-cookies-btn-wrapper">
+          <button class="ff-cookies-btn-ok" (click)="cookiesChecked()">{{acceptSelectedText}}</button>
+        </p>
+      </ff-tab>
+      <ff-tab *ngIf="mainTabsTitle[1]" [tabTitle]="mainTabsTitle[1]">
+        <div class="tab-content-wrapper">
+          <div class="left-column">
+            <ng-content select="[aside]"></ng-content>
+          </div>
+          <div class="right-column">
+            <ng-content select="[body]"></ng-content>
+          </div>
+        </div>
+      </ff-tab>
+    </ff-tabs>
+  </div>
+</div>
+
+

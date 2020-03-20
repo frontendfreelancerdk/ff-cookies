@@ -1,0 +1,25 @@
+.ff-cookies-table {
+  &-row {
+    padding: 10px 20px;
+    display: flex;
+    flex-flow: column;
+    @media screen and (min-width: 767px) {
+      flex-flow: row;
+    }
+
+    &:nth-child(even) {
+      background-color: #eee;
+    }
+  }
+
+  &-col {
+    padding: 0 10px;
+    flex: 1;
+    word-break: break-word;
+  }
+
+  &-title {
+    font-weight: 700;
+    color: #333;
+  }
+}

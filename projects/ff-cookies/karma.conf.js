@@ -16,15 +16,15 @@ module.exports = function (config) {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, '../../coverage'),
-      reports: ['html', 'lcovonly','json'],
-      fixWebpackSourcePaths: true,
       thresholds: {
-        statements: 50,
-        lines: 50,
-        branches: 30,
-        functions: 50
-      }
+        statements: 0,
+        lines: 0,
+        branches: 0,
+        functions: 0
+      },
+      dir: require('path').join(__dirname, '../../coverage/ff-cookies'),
+      reports: ['html', 'lcovonly', 'text-summary'],
+      fixWebpackSourcePaths: true
     },
     reporters: ['progress', 'kjhtml'],
     port: 9876,
@@ -38,6 +38,7 @@ module.exports = function (config) {
         flags: ['--no-sandbox']
       }
     },
-    singleRun: false
+    singleRun: false,
+    restartOnFileChange: true
   });
 };

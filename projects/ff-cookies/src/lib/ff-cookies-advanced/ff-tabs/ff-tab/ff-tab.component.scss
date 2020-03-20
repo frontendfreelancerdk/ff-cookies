@@ -1,0 +1,14 @@
+:host-context(.ff-tab-vertical) .ff-tab-nav {
+  @media screen and (min-width: 767px) {
+    position: absolute;
+    top: -110px;
+    left: 25%;
+    right: 0;
+    max-height: calc(100% + 110px);
+    overflow-y: auto;
+  }
+  @media screen and (min-width: 1150px) {
+    top: -50px;
+    max-height: calc(100% + 50px);
+  }
+}
