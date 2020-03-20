@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {ICookiesSet} from 'ff-cookies';
 
 @Component({
   selector: 'ff-root',
@@ -12,10 +13,10 @@ export class AppComponent {
   linkText = 'cookies policy';
   link = 'cookies';
   agreeText = 'Ok';
-  cookiesSet;
+  cookiesSet: ICookiesSet;
 
   constructor(private http: HttpClient) {
-    this.http.get('/assets/cookies.json').subscribe(json => {
+    this.http.get('/assets/cookies.json').subscribe((json: ICookiesSet) => {
       this.cookiesSet = json;
     });
   }
